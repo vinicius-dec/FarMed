@@ -1,0 +1,547 @@
+<svg
+  width="24"
+  height="24"
+  viewBox="0 0 24 24"
+  fill="none"
+  xmlns="http://www.w3.org/2000/svg"
+>
+  <path
+    fill-rule="evenodd"
+    clip-rule="evenodd"
+    d="M18.319 14.4326C20.7628 11.2941 20.542 6.75347 17.6569 3.86829C14.5327 0.744098 9.46734 0.744098 6.34315 3.86829C3.21895 6.99249 3.21895 12.0578 6.34315 15.182C9.22833 18.0672 13.769 18.2879 16.9075 15.8442C16.921 15.8595 16.9351 15.8745 16.9497 15.8891L21.1924 20.1317C21.5829 20.5223 22.2161 20.5223 22.6066 20.1317C22.9971 19.7412 22.9971 19.1081 22.6066 18.7175L18.364 14.4749C18.3493 14.4603 18.3343 14.4462 18.319 14.4326ZM16.2426 5.28251C18.5858 7.62565 18.5858 11.4246 16.2426 13.7678C13.8995 16.1109 10.1005 16.1109 7.75736 13.7678C5.41421 11.4246 5.41421 7.62565 7.75736 5.28251C10.1005 2.93936 13.8995 2.93936 16.2426 5.28251Z"
+    fill="currentColor"
+  />
+</svg>
+
+
+
+
+
+
+  <div>
+                <div class="formato-medicamento">
+                    <div class="topo">
+                      
+                        <p><i class="fa-regular fa-clock"></i> Registar Dose</p>
+                    </div>
+                    <div>
+                        <label for="input">Horario da dose</label>
+                        <input type="time" name="" id="">
+                        <button><i class="fa-solid fa-plus"></i></button>
+                    </div>     
+                </div>
+                <div class="formato-medicamento">
+                    <div class="topo">
+                        <p>Horario de doses</p>
+                    </div>
+                    <p class="quantidade">Nenhuma dose registrada ainda</p>
+                </div>
+</div>
+
+
+
+
+
+const categoryData= [
+  cardiovascular, {
+    name: "Cardiovascular",
+    description: "Medicamentos para saúde e tratamento do sistema cardiovascular",
+    info: "Esta categoria inclui medicamentos para hipertensão, arritmias, insuficiência cardíaca e outras condições relacionadas ao coração e vasos sanguíneos.",
+    medicines: [
+      {
+        id: "losartana",
+        name: "Losartana 50mg",
+        category: "Anti-hipertensivo",
+        description: "Controle da pressão arterial",
+      },
+      {
+        id: "atenolol",
+        name: "Atenolol 25mg",
+        category: "Beta-bloqueador",
+        description: "Tratamento de hipertensão e angina",
+      },
+      {
+        id: "sinvastatina",
+        name: "Sinvastatina 20mg",
+        category: "Hipolipemiante",
+        description: "Redução do colesterol",
+      },
+      {
+        id: "enalapril",
+        name: "Enalapril 10mg",
+        category: "Anti-hipertensivo",
+        description: "Controle da pressão arterial",
+      }
+    ]
+  },
+  neurologico, {
+    name: "Neurológico",
+    description: "Medicamentos para tratamento do sistema nervoso",
+    info: "Inclui medicamentos para doenças neurológicas, transtornos mentais, epilepsia, Parkinson e outras condições do sistema nervoso.",
+    medicines: [
+      {
+        id: "fluoxetina",
+        name: "Fluoxetina 20mg",
+        category: "Antidepressivo",
+        description: "Tratamento de depressão e ansiedade",
+      },
+      {
+        id: "diazepam",
+        name: "Diazepam 5mg",
+        category: "Ansiolítico",
+        description: "Controle de ansiedade",
+      },
+      {
+        id: "carbamazepina",
+        name: "Carbamazepina 200mg",
+        category: "Anticonvulsivante",
+        description: "Controle de epilepsia",
+      }
+    ]
+  },
+  analgesicos, {
+    name: "Analgésicos",
+    description: "Medicamentos para alívio de dores e inflamações",
+    info: "Categoria que abrange analgésicos simples, anti-inflamatórios e medicamentos para dor moderada a severa.",
+    medicines: [
+      {
+        id: "dipirona",
+        name: "Dipirona 500mg",
+        category: "Analgésico",
+        description: "Indicado para alívio de dores e febre",
+      },
+      {
+        id: "paracetamol",
+        name: "Paracetamol 750mg",
+        category: "Analgésico",
+        description: "Alívio de dores leves a moderadas",
+      },
+      {
+        id: "ibuprofeno",
+        name: "Ibuprofeno 600mg",
+        category: "Anti-inflamatório",
+        description: "Alívio de dor e inflamação",
+      },
+      {
+        id: "nimesulida",
+        name: "Nimesulida 100mg",
+        category: "Anti-inflamatório",
+        description: "Tratamento de processos inflamatórios",
+      }
+    ]
+  },
+  antibioticos, {
+    name: "Antibióticos",
+    description: "Medicamentos para combate a infecções bacterianas",
+    info: "Antibióticos de diversas classes para tratamento de infecções bacterianas em diferentes sistemas do corpo.",
+    medicines: [
+      {
+        id: "amoxicilina",
+        name: "Amoxicilina 500mg",
+        category: "Antibiótico",
+        description: "Tratamento de infecções bacterianas",
+      },
+      {
+        id: "azitromicina",
+        name: "Azitromicina 500mg",
+        category: "Antibiótico",
+        description: "Infecções respiratórias e de pele",
+      },
+      {
+        id: "cefalexina",
+        name: "Cefalexina 500mg",
+        category: "Antibiótico",
+        description: "Tratamento de infecções bacterianas",
+      },
+      {
+        id: "ciprofloxacino",
+        name: "Ciprofloxacino 500mg",
+        category: "Antibiótico",
+        description: "Infecções do trato urinário",
+      }
+    ]
+  },
+  respiratorio, {
+    name: "Respiratório",
+    description: "Medicamentos para problemas respiratórios",
+    info: "Tratamentos para asma, bronquite, alergias respiratórias e outras condições do sistema respiratório.",
+    medicines: [
+      {
+        id: "salbutamol",
+        name: "Salbutamol",
+        category: "Broncodilatador",
+        description: "Alívio de broncoespasmo",
+      },
+      {
+        id: "loratadina",
+        name: "Loratadina 10mg",
+        category: "Anti-histamínico",
+        description: "Alívio de alergias respiratórias",
+      },
+      {
+        id: "montelucaste",
+        name: "Montelucaste 10mg",
+        category: "Antiasmático",
+        description: "Controle da asma",
+      }
+    ]
+  },
+   ortopedico, {
+    name: "Ortopédico",
+    description: "Medicamentos para ossos, músculos e articulações",
+    info: "Tratamentos para dores articulares, musculares, osteoporose e outras condições ortopédicas.",
+    medicines: [
+      {
+        id: "calcio-vitamina-d",
+        name: "Cálcio + Vitamina D",
+        category: "Suplemento",
+        description: "Fortalecimento ósseo",
+      },
+      {
+        id: "diclofenaco",
+        name: "Diclofenaco 50mg",
+        category: "Anti-inflamatório",
+        description: "Alívio de dor e inflamação",
+
+      },
+      {
+        id: "glicosamina",
+        name: "Glicosamina 1500mg",
+        category: "Condroprotetor",
+        description: "Saúde das articulações",
+      }
+    ]
+  },
+]
+
+{
+  "losartana": { 
+    "nome": "Losartana Potássica",
+    "categoria": "Anti-hipertensivo",
+    "descricao": "Medicamento usado para controle da pressão arterial alta.",
+    "composicao": "Cada comprimido contém 50mg de losartana potássica.",
+    "comoTomar": "1 comprimido de 50mg ao dia ou conforme prescrição médica.",
+    "frequencia": "1 vez ao dia, preferencialmente no mesmo horário.",
+    "doseMaxima": "100mg por dia.",
+    "efeitos": ["Tontura", "Fadiga", "Dor nas costas", "Tosse seca"],
+    "avisos": [
+      "Não interrompa o tratamento sem orientação médica.",
+      "Monitore regularmente a pressão arterial.",
+      "Não use durante a gravidez.",
+      "Evite suplementos de potássio sem orientação."
+    ],
+    "armazenamento": "Manter em temperatura ambiente, ao abrigo da luz."
+  },
+
+  "atenolol": { 
+    "nome": "Atenolol",
+    "categoria": "Beta-bloqueador / Anti-hipertensivo",
+    "descricao": "Utilizado para tratar pressão alta e problemas cardíacos.",
+    "composicao": "Cada comprimido contém 25mg de atenolol.",
+    "comoTomar": "1 comprimido de 25mg ao dia, conforme orientação médica.",
+    "frequencia": "1 vez ao dia.",
+    "doseMaxima": "100mg por dia.",
+    "efeitos": ["Cansaço", "Tontura", "Frio nas extremidades", "Batimentos lentos"],
+    "avisos": [
+      "Não interromper o uso abruptamente.",
+      "Evite dirigir se sentir tontura.",
+      "Informe o médico se tiver asma ou diabetes."
+    ],
+    "armazenamento": "Guardar em local seco e fresco."
+  },
+
+  "sinvastatina": { 
+    "nome": "Sinvastatina",
+    "categoria": "Redutor de colesterol (Estatina)",
+    "descricao": "Usado para reduzir o colesterol e prevenir doenças cardiovasculares.",
+    "composicao": "Cada comprimido contém 20mg de sinvastatina.",
+    "comoTomar": "1 comprimido de 20mg à noite, conforme orientação médica.",
+    "frequencia": "1 vez ao dia, à noite.",
+    "doseMaxima": "40mg por dia.",
+    "efeitos": ["Dor muscular", "Dor de cabeça", "Distúrbios digestivos"],
+    "avisos": [
+      "Evite consumo de álcool e suco de grapefruit.",
+      "Informe o médico se sentir dores musculares intensas.",
+      "Não use durante a gravidez."
+    ],
+    "armazenamento": "Manter em local seco, fresco e protegido da luz."
+  },
+
+  "enalapril": { 
+    "nome": "Enalapril",
+    "categoria": "Anti-hipertensivo (Inibidor da ECA)",
+    "descricao": "Medicamento indicado para tratamento da hipertensão e insuficiência cardíaca.",
+    "composicao": "Cada comprimido contém 10mg de enalapril maleato.",
+    "comoTomar": "1 comprimido de 10mg ao dia ou conforme orientação médica.",
+    "frequencia": "1 vez ao dia.",
+    "doseMaxima": "40mg por dia.",
+    "efeitos": ["Tosse seca", "Tontura", "Pressão baixa", "Cansaço"],
+    "avisos": [
+      "Não use durante a gravidez.",
+      "Informe o médico se sentir tosse persistente.",
+      "Monitore a pressão regularmente."
+    ],
+    "armazenamento": "Guardar em temperatura ambiente e protegido da umidade."
+  },
+
+  "fluoxetina": { 
+    "nome": "Fluoxetina",
+    "categoria": "Antidepressivo (ISRS)",
+    "descricao": "Usado para tratar depressão, ansiedade e transtornos obsessivo-compulsivos.",
+    "composicao": "Cada cápsula contém 20mg de fluoxetina.",
+    "comoTomar": "1 cápsula de 20mg ao dia, preferencialmente pela manhã.",
+    "frequencia": "1 vez ao dia.",
+    "doseMaxima": "80mg por dia.",
+    "efeitos": ["Insônia", "Náusea", "Dor de cabeça", "Ansiedade leve"],
+    "avisos": [
+      "Não interrompa o tratamento abruptamente.",
+      "Evite o consumo de álcool.",
+      "Pode demorar algumas semanas para fazer efeito completo."
+    ],
+    "armazenamento": "Conservar em temperatura ambiente e protegido da luz."
+  },
+
+  "diazepam": { 
+    "nome": "Diazepam",
+    "categoria": "Ansiolítico / Sedativo (Benzodiazepínico)",
+    "descricao": "Usado para tratar ansiedade, insônia e convulsões.",
+    "composicao": "Cada comprimido contém 5mg de diazepam.",
+    "comoTomar": "1 comprimido à noite ou conforme prescrição médica.",
+    "frequencia": "1 vez ao dia ou conforme necessidade.",
+    "doseMaxima": "30mg por dia.",
+    "efeitos": ["Sonolência", "Tontura", "Cansaço", "Dependência se usado por longo tempo"],
+    "avisos": [
+      "Evite dirigir após o uso.",
+      "Não misture com álcool.",
+      "Uso prolongado pode causar dependência."
+    ],
+    "armazenamento": "Guardar em local seco e fresco."
+  },
+
+  "carbamazepina": { 
+    "nome": "Carbamazepina",
+    "categoria": "Anticonvulsivante / Estabilizador de humor",
+    "descricao": "Usado para epilepsia, neuralgia e transtorno bipolar.",
+    "composicao": "Cada comprimido contém 200mg de carbamazepina.",
+    "comoTomar": "1 comprimido de 200mg duas vezes ao dia ou conforme orientação médica.",
+    "frequencia": "2 vezes ao dia.",
+    "doseMaxima": "1200mg por dia.",
+    "efeitos": ["Tontura", "Sonolência", "Náusea", "Visão turva"],
+    "avisos": [
+      "Informe o médico sobre outros medicamentos em uso.",
+      "Pode causar tontura — evite dirigir.",
+      "Monitore os níveis sanguíneos regularmente."
+    ],
+    "armazenamento": "Conservar em temperatura ambiente, longe da umidade."
+  },
+
+  "paracetamol": { 
+    "nome": "Paracetamol",
+    "categoria": "Analgésico / Antitérmico",
+    "descricao": "Usado para aliviar dores e reduzir febre.",
+    "composicao": "Cada comprimido contém 750mg de paracetamol.",
+    "comoTomar": "1 comprimido a cada 6 a 8 horas, conforme necessidade.",
+    "frequencia": "A cada 6 a 8 horas.",
+    "doseMaxima": "4000mg por dia.",
+    "efeitos": ["Raramente náusea", "Em altas doses pode causar danos ao fígado"],
+    "avisos": [
+      "Não exceder a dose máxima diária.",
+      "Evite o uso com bebidas alcoólicas.",
+      "Procure orientação médica se a dor persistir."
+    ],
+    "armazenamento": "Conservar em local fresco e seco."
+  },
+
+  "ibuprofeno": { 
+    "nome": "Ibuprofeno",
+    "categoria": "Anti-inflamatório / Analgésico",
+    "descricao": "Usado para tratar inflamações, dores e febre.",
+    "composicao": "Cada comprimido contém 600mg de ibuprofeno.",
+    "comoTomar": "1 comprimido a cada 8 horas, conforme orientação médica.",
+    "frequencia": "A cada 8 horas.",
+    "doseMaxima": "2400mg por dia.",
+    "efeitos": ["Dor abdominal", "Azia", "Tontura"],
+    "avisos": [
+      "Evite o uso em jejum.",
+      "Não usar por mais de 10 dias sem orientação médica.",
+      "Cautela em pessoas com problemas gástricos."
+    ],
+    "armazenamento": "Guardar em local seco e ao abrigo da luz."
+  },
+
+  "nimesulida": { 
+    "nome": "Nimesulida",
+    "categoria": "Anti-inflamatório / Analgésico",
+    "descricao": "Indicada para dores e inflamações de curta duração.",
+    "composicao": "Cada comprimido contém 100mg de nimesulida.",
+    "comoTomar": "1 comprimido a cada 12 horas, após as refeições.",
+    "frequencia": "A cada 12 horas.",
+    "doseMaxima": "200mg por dia.",
+    "efeitos": ["Dor de estômago", "Náusea", "Sonolência"],
+    "avisos": [
+      "Evite o uso prolongado.",
+      "Contraindicado em pessoas com problemas hepáticos.",
+      "Usar apenas sob orientação médica."
+    ],
+    "armazenamento": "Conservar em local fresco e seco."
+  },
+
+  "azitromicina": { 
+    "nome": "Azitromicina",
+    "categoria": "Antibiótico (Macrolídeo)",
+    "descricao": "Tratamento de infecções respiratórias, de garganta e de pele.",
+    "composicao": "Cada comprimido contém 500mg de azitromicina di-hidratada.",
+    "comoTomar": "1 comprimido de 500mg ao dia por 3 dias.",
+    "frequencia": "1 vez ao dia.",
+    "doseMaxima": "500mg por dia.",
+    "efeitos": ["Náusea", "Diarreia", "Dor abdominal", "Tontura"],
+    "avisos": [
+      "Complete o tratamento conforme prescrição.",
+      "Evite o uso com antiácidos sem orientação.",
+      "Não use em caso de alergia a macrolídeos."
+    ],
+    "armazenamento": "Conservar em local fresco e protegido da umidade."
+  },
+
+  "cefalexina": { 
+    "nome": "Cefalexina",
+    "categoria": "Antibiótico (Cefalosporina)",
+    "descricao": "Usado para tratar infecções bacterianas como amigdalite e infecção urinária.",
+    "composicao": "Cada cápsula contém 500mg de cefalexina monoidratada.",
+    "comoTomar": "1 cápsula a cada 6 ou 8 horas.",
+    "frequencia": "A cada 6 a 8 horas.",
+    "doseMaxima": "4000mg por dia.",
+    "efeitos": ["Náusea", "Diarreia", "Dor abdominal"],
+    "avisos": [
+      "Evite interromper o tratamento.",
+      "Use com cautela em pacientes com problemas renais.",
+      "Informe o médico se houver diarreia intensa."
+    ],
+    "armazenamento": "Guardar em local seco e protegido da luz."
+  },
+
+  "ciprofloxacino": { 
+    "nome": "Ciprofloxacino",
+    "categoria": "Antibiótico (Fluoroquinolona)",
+    "descricao": "Tratamento de infecções urinárias, respiratórias e intestinais.",
+    "composicao": "Cada comprimido contém 500mg de ciprofloxacino.",
+    "comoTomar": "1 comprimido a cada 12 horas.",
+    "frequencia": "A cada 12 horas.",
+    "doseMaxima": "1500mg por dia.",
+    "efeitos": ["Náusea", "Tontura", "Diarreia", "Insônia"],
+    "avisos": [
+      "Evite exposição solar excessiva.",
+      "Não use junto com antiácidos.",
+      "Complete o tratamento mesmo que os sintomas melhorem."
+    ],
+    "armazenamento": "Manter em temperatura ambiente, longe da luz."
+  },
+
+  "salbutamol": { 
+    "nome": "Salbutamol",
+    "categoria": "Broncodilatador / Antiasmático",
+    "descricao": "Utilizado para aliviar crises de asma e bronquite.",
+    "composicao": "Cada dose contém 100mcg de salbutamol.",
+    "comoTomar": "1 a 2 inalações conforme necessidade.",
+    "frequencia": "Usar quando necessário.",
+    "doseMaxima": "8 inalações por dia.",
+    "efeitos": ["Tremores", "Taquicardia", "Tontura", "Dor de cabeça"],
+    "avisos": [
+      "Não exceda a dose recomendada.",
+      "Use apenas conforme plano de tratamento.",
+      "Procure o médico se os sintomas persistirem."
+    ],
+    "armazenamento": "Manter em temperatura ambiente, longe da umidade."
+  },
+
+  "loratadina": { 
+    "nome": "Loratadina",
+    "categoria": "Antialérgico / Anti-histamínico",
+    "descricao": "Usado para aliviar sintomas de alergias como espirros e coceira.",
+    "composicao": "Cada comprimido contém 10mg de loratadina.",
+    "comoTomar": "1 comprimido de 10mg ao dia.",
+    "frequencia": "1 vez ao dia.",
+    "doseMaxima": "10mg por dia.",
+    "efeitos": ["Sonolência leve", "Dor de cabeça", "Boca seca"],
+    "avisos": [
+      "Evite dirigir se sentir sonolência.",
+      "Use com cautela em problemas hepáticos.",
+      "Não misture com álcool."
+    ],
+    "armazenamento": "Guardar em local seco e fresco."
+  },
+
+  "montelucaste": { 
+    "nome": "Montelucaste de Sódio",
+    "categoria": "Antiasmático / Antialérgico",
+    "descricao": "Usado para prevenir crises de asma e aliviar rinite alérgica.",
+    "composicao": "Cada comprimido contém 10mg de montelucaste de sódio.",
+    "comoTomar": "1 comprimido à noite.",
+    "frequencia": "1 vez ao dia, à noite.",
+    "doseMaxima": "10mg por dia.",
+    "efeitos": ["Dor de cabeça", "Insônia", "Dor abdominal"],
+    "avisos": [
+      "Não indicado para crises agudas.",
+      "Use regularmente para manter o controle da asma.",
+      "Informe o médico se houver alterações de humor."
+    ],
+    "armazenamento": "Conservar em temperatura ambiente e protegido da umidade."
+  },
+
+  "vitamina_d": { 
+    "nome": "Vitamina D",
+    "categoria": "Suplemento vitamínico",
+    "descricao": "Ajuda na absorção de cálcio e fortalecimento ósseo.",
+    "composicao": "Cada cápsula contém 2000UI de colecalciferol (Vitamina D3).",
+    "comoTomar": "1 cápsula ao dia.",
+    "frequencia": "1 vez ao dia.",
+    "doseMaxima": "4000UI por dia.",
+    "efeitos": ["Raros efeitos adversos", "Aumento de cálcio no sangue em uso excessivo"],
+    "avisos": [
+      "Não exceder a dose recomendada.",
+      "Evitar uso prolongado sem acompanhamento médico.",
+      "Manter fora do alcance de crianças."
+    ],
+    "armazenamento": "Guardar em local fresco, seco e protegido da luz."
+  },
+
+  "complexo_b": { 
+    "nome": "Complexo B",
+    "categoria": "Suplemento vitamínico",
+    "descricao": "Conjunto de vitaminas do complexo B que auxiliam na energia e metabolismo.",
+    "composicao": "Contém vitaminas B1, B2, B3, B5, B6, B12 e ácido fólico.",
+    "comoTomar": "1 comprimido ao dia após refeição.",
+    "frequencia": "1 vez ao dia.",
+    "doseMaxima": "1 comprimido por dia.",
+    "efeitos": ["Urina amarelada", "Náusea leve ocasional"],
+    "avisos": [
+      "Evite exceder a dose diária.",
+      "Não substitui uma alimentação equilibrada.",
+      "Consultar médico para uso prolongado."
+    ],
+    "armazenamento": "Conservar em local seco, fresco e protegido da luz."
+  },
+
+  "vitamina_c": { 
+    "nome": "Vitamina C",
+    "categoria": "Suplemento vitamínico / Antioxidante",
+    "descricao": "Fortalece a imunidade e auxilia na absorção de ferro.",
+    "composicao": "Cada comprimido contém 1g (1000mg) de ácido ascórbico.",
+    "comoTomar": "Dissolver 1 comprimido em água e tomar 1 vez ao dia.",
+    "frequencia": "1 vez ao dia.",
+    "doseMaxima": "2000mg por dia.",
+    "efeitos": ["Azia", "Desconforto abdominal leve"],
+    "avisos": [
+      "Não exceder a dose máxima diária.",
+      "Cautela em pacientes com cálculo renal.",
+      "Consumir logo após o preparo."
+    ],
+    "armazenamento": "Manter o tubo fechado e protegido da umidade."
+  }
+}
+
+
+<i class="fa-solid fa-pills"></i>
+<i class="fa-solid fa-syringe"></i>
+<i class="fa-solid fa-lungs"></i>
+<i class="fa-solid fa-bone"></i>
