@@ -11,5 +11,6 @@ const rotas = {
 
 
 app.listen(PORT, () =>{
-    console.log("Carambolas Funcina seu geregotango do cacino");   
+    console.log("Servidor escutando...");   
 });
+
