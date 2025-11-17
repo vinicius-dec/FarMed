@@ -10,22 +10,24 @@ Essas instruções permitirão que você obtenha uma cópia do projeto em opera�
 
 Algumas intalações para que o projeto funcione 
 
-```
-npm i node.js
-npm i express
-npm i mongodb
-npm i mongoose
-
-```
+* Ter o node.js intalado na maquina
+* Uma conection string no mongo
+* Um arquivo .env com uma chave chamada DB_CONECT_STRING, que tem que ter comoo valor  da conection string do mongodb
 
 ### 🔧 Instalação
 
-Para iniciar o sevidor:
+Para instalar as dependencias na maquina:
 
 ```
-npm start (Para inicar o servidor)
+npm i
 ```
 
+### Inicia O projeto 
+
+Para iniar o sevidor:
+```
+npm start
+```
 
 Termine com um exemplo de como obter dados do sistema ou como usá-los para uma pequena demonstração.
 
